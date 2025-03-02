@@ -1,29 +1,32 @@
 
 export enum LogLevel {
-    NOTSET = 0,
     DEBUG = 10,
     INFO = 20,
     WARN = 30,
     ERROR = 40,
-    FATAL = 50
+    CRITICAL = 50
 }
 
-
-export interface ILogRecord {
-    getFormattedMessage(): unknown;
-    message: string;
-    level: number;
+export interface LogRecord {
+    name: string;
+    level: LogLevel;
     levelName: string;
+    message: string;
     timestamp: Date;
     args?: any[];
-    error?: Error;
-    getFormattedMessage(): string;
 }
 
 
 export interface IHandler {
-    level: number;
-    setLevel(level: number): void;
-    handle(record: ILogRecord): void
-
+    setLevel(level: LogLevel): void;
+    setFormatter(formatter: IFormatter): void;
+    handle(record: LogRecord): void;
+    format(record: LogRecord): string;
 }
+
+
+export interface IFormatter {
+    format(record: LogRecord): string;
+}
+
+
