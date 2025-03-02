@@ -10,7 +10,7 @@ Install `njslog` using npm:
 npm install njslog
 ```
 
----
+----
 
 ## Usage
 
