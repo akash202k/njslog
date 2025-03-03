@@ -58,7 +58,9 @@ The following methods are available for logging messages at different levels:
 | `logger.error(message: string, ...args: any[]): void` | Logs a message with [ERROR] level. |
 | `logger.critical(message: string, ...args: any[]): void` | Logs a message with [CRITICAL] level. |
 
-> **Note:** Avoid logging sensitive information such as passwords in clear text to ensure security.
+> ⚠️ **Note:** Avoid logging sensitive information such as passwords in clear text to ensure security.
+
+
 
 ---
 
