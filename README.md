@@ -21,7 +21,7 @@ import { Logger, LogLevel, ConsoleHandler, Formatter } from 'njslog';
 
 // Create a logger
 const logger = Logger.getLogger("njslog");
-logger.setLevel(LogLevel.DEBUG);
+
 
 // Create a console handler
 const ch = new ConsoleHandler();

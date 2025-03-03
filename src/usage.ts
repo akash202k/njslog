@@ -3,7 +3,6 @@ import { ConsoleHandler, Formatter, Logger, LogLevel, } from "./index";
 
 // create  logger
 const logger = Logger.getLogger("njslog");
-logger.setLevel(LogLevel.DEBUG);
 
 // create console handler
 const ch = new ConsoleHandler();
