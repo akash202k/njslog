@@ -7,6 +7,10 @@ export enum LogLevel {
     CRITICAL = 50
 }
 
+// record.leve >= this.level
+// debug (10) >= error (40) this not correct condition 
+// no log 
+
 export interface LogRecord {
     name: string;
     level: LogLevel;

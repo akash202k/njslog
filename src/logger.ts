@@ -4,13 +4,13 @@ import { IHandler, LogLevel, LogRecord } from "./types";
 
 export class Logger {
     private name: string;
-    private level: LogLevel;
+    // private level: LogLevel;
     private handlers: IHandler[] = [];
     private static loggers: Map<string, Logger> = new Map();
 
     private constructor(name: string) {
         this.name = name;
-        this.level = LogLevel.DEBUG;
+        // this.level = LogLevel.DEBUG;
     }
 
     static getLogger(name: string) {
@@ -20,9 +20,9 @@ export class Logger {
         return this.loggers.get(name);
     }
 
-    setLevel(level: LogLevel): void {
-        this.level = level;
-    }
+    // setLevel(level: LogLevel): void {
+    //     this.level = level;
+    // }
 
     addHandler(handler: IHandler): void {
         this.handlers.push(handler);
@@ -36,20 +36,20 @@ export class Logger {
     }
 
     private log(level: LogLevel, levelName: string, message: string, ...args: any[]): void {
-        if (level >= this.level) {
-            const record: LogRecord = {
-                name: this.name,
-                level,
-                levelName,
-                message,
-                timestamp: new Date(),
-                args
-            };
+        // if (level >= this.level) {
+        const record: LogRecord = { // lets publish entire records to handler and let them handle level logic
+            name: this.name,
+            level,
+            levelName,
+            message,
+            timestamp: new Date(),
+            args
+        };
 
-            for (const handler of this.handlers) {
-                handler.handle(record)
-            }
+        for (const handler of this.handlers) {
+            handler.handle(record)
         }
+        // }
     }
 
     debug(message: string, ...args: any[]): void {

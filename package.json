@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc",
-    "publish": "npm publish"
+    "publish": "npm publish",
+    "dev": "nodemon --exec ts-node src/usage.ts"
   },
   "keywords": [],
   "files": [
