@@ -17,6 +17,7 @@ export interface LogRecord {
     levelName: string;
     message: string;
     timestamp: Date;
+    filePath?: string;
     args?: any[];
 }
 

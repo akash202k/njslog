@@ -1,0 +1,11 @@
+2025-03-03T17:14:29.832Z - njslog - INFO     - This is an info message
+2025-03-03T17:14:29.832Z - njslog - WARN     - This is a warning message
+2025-03-03T17:14:29.832Z - njslog - ERROR    - This is an error message
+2025-03-03T17:14:29.832Z - njslog - CRITICAL - This is a critical message
+2025-03-03T17:15:51.907Z - njslog - CRITICAL - This is a critical message
+2025-03-03T17:16:04.921Z - njslog - CRITICAL - This is a critical message
+2025-03-03T17:16:06.780Z - njslog - CRITICAL - This is a critical message
+2025-03-03T17:16:08.010Z - njslog - CRITICAL - This is a critical message
+2025-03-03T17:16:34.128Z - njslog - CRITICAL - This is a critical message
+2025-03-03T17:16:35.907Z - njslog - CRITICAL - This is a critical message
+2025-03-03T17:16:37.624Z - njslog - CRITICAL - This is a critical message
