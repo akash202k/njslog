@@ -3,9 +3,9 @@ import {
     ConsoleHandler,
     Formatter,
     Logger,
-    LogLevel
+    LogLevel,
+    FileHandler
 } from "./index";
-import { FileHandler } from "./handlers/file-handler";
 
 // Create a logger instance
 const logger = Logger.getLogger("njslog");
