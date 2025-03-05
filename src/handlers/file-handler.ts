@@ -5,7 +5,7 @@ import { exit } from "process";
 
 export class FileHandler extends Handler {
     private filepath: string;
-    private isPackageRootDir: Boolean;
+    private isPackageRootDir: Boolean = false;
     private rootDir: string;
 
     constructor(filepath?: string) {
@@ -19,8 +19,6 @@ export class FileHandler extends Handler {
                 this.isPackageRootDir = true;
             }
         }
-        this.isPackageRootDir = false
-
     }
 
     handlePackageRootDir(): void {
