@@ -5,7 +5,7 @@ import { exit } from "process";
 
 export class FileHandler extends Handler {
     private filepath: string;
-    private isPackageRootDir: Boolean;
+    private isPackageRootDir: Boolean = false;
     private rootDir: string;
 
     constructor(filepath?: string) {
@@ -19,15 +19,12 @@ export class FileHandler extends Handler {
                 this.isPackageRootDir = true;
             }
         }
-        this.isPackageRootDir = false
-
     }
 
     handlePackageRootDir(): void {
         let basePath = "/";
         for (const item of __dirname.split("/")) {
             if (item === "node_modules") {
-                basePath = path.join(basePath, item);
                 this.rootDir = basePath;
                 break;
             }
