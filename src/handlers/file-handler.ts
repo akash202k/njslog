@@ -25,7 +25,6 @@ export class FileHandler extends Handler {
         let basePath = "/";
         for (const item of __dirname.split("/")) {
             if (item === "node_modules") {
-                basePath = path.join(basePath, item);
                 this.rootDir = basePath;
                 break;
             }
