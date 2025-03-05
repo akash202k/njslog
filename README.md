@@ -17,8 +17,7 @@ npm install njslog
 ### Basic Example
 
 ```typescript
-import { Logger, LogLevel, ConsoleHandler, Formatter } from 'njslog';
-import { FileHandler } from './handlers/file-handler';
+import { Logger, LogLevel, ConsoleHandler, Formatter, FileHandler } from 'njslog';
 
 // Create a logger
 const logger = Logger.getLogger("njslog");
