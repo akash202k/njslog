@@ -18,10 +18,14 @@ npm install njslog
 
 ```typescript
 import { Logger, LogLevel, ConsoleHandler, Formatter, FileHandler } from 'njslog';
+```
 
+```typescript
 // Create a logger
 const logger = Logger.getLogger("njslog");
+```
 
+```typescript
 // Create a console handler
 const ch = new ConsoleHandler();
 ch.setLevel(LogLevel.DEBUG);
@@ -32,9 +36,10 @@ ch.setFormatter(formatter);
 
 // Add the console handler to the logger
 logger.addHandler(ch);
+```
 
-// File handler
 
+```typescript
 // Create a file handler, set log level, and assign the formatter
 const fileHandler = new FileHandler();
 fileHandler.setLevel(LogLevel.DEBUG);
@@ -45,7 +50,9 @@ fileHandler.setFormatter(file_formatter);
 
 // Add the file handler to the logger
 logger.addHandler(fileHandler);
+```
 
+```typescript
 // Logging messages
 logger.debug("This is a debug message");
 logger.info("This is an info message");
