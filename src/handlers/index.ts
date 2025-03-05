@@ -1,9 +1,9 @@
 import { log } from "console";
-import { Formatter } from "./formatter";
-import { LogLevel, IFormatter, LogRecord } from "./types";
+import { Formatter } from "../formatter";
+import { LogLevel, IFormatter, LogRecord, IHandler } from "../index";
 
 
-export abstract class Handler implements Handler {
+export abstract class Handler implements IHandler {
     private level: LogLevel = LogLevel.DEBUG; // lets keep default level is DEBUG
     private formatter: IFormatter = new Formatter();
 
@@ -31,8 +31,3 @@ export abstract class Handler implements Handler {
 
 // Console Handler
 
-export class ConsoleHandler extends Handler {
-    protected emit(message: string): void {
-        console.log(message);
-    }
-}

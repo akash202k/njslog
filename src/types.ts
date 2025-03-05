@@ -33,4 +33,8 @@ export interface IFormatter {
     format(record: LogRecord): string;
 }
 
+export interface FHOptions {
+    filepath: string,
+    maxsize: string,
 
+}
