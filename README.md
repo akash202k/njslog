@@ -38,7 +38,6 @@ ch.setFormatter(formatter);
 logger.addHandler(ch);
 ```
 
-// File handler
 
 ```typescript
 // Create a file handler, set log level, and assign the formatter
